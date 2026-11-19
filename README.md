@@ -79,4 +79,4 @@ python -m training.prepare_data source --data-root /path/to/BJTU_RAO_Bogie_Datas
 python -m training.fit --data data --seed 1994217509 --output outputs/model.pt
 ~~~
 
-The fitting data use measured A–E windows and synthetic AB/CD combinations constructed from source single faults. Measured AB, CD and F windows are reserved for evaluation. Fitting, calibration, validation and evaluation use the half-open intervals [0, 3.488), [5.512, 6.504), [6.504, 7.496) and [8.012, 9.996) seconds, respectively. See the [training instructions](training/README.md) for the source arrays, seed handling and model export.
+The fitting data use measured A–E windows and synthetic AB/CD combinations constructed from source single faults. Measured AB, CD and F windows are reserved for evaluation. Fitting, calibration, validation and evaluation use the half-open intervals [0, 3.488), [5.512, 6.504), [6.504, 7.496) and [8.012, 9.996) seconds, respectively. We checked candidate labels and the order of neighbor distances on validation windows. See the [training instructions](training/README.md) for the source arrays, seed handling and model export.
