@@ -1,8 +1,9 @@
 # Train CCS-FD on prepared source features
 
-From the repository root, with the package dependencies installed, prepare source features from the BJTU-RAO recordings and then train a model:
+From the repository root, install the CSV reader and training dependencies, prepare the source features from the BJTU-RAO recordings, and fit a model:
 
 ```bash
+python -m pip install -e ".[prepare]"
 python -m training.prepare_data source --data-root /path/to/BJTU_RAO_Bogie_Datasets --output-dir ./source
 python -m training.fit --data ./source --seed 1994217509 --output ./runs/1994217509.pt
 ```
